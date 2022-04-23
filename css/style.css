@@ -1,0 +1,274 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CBNUJIKJI";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/CBNUJIKJI.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "NEXON Lv1 Gothic OTF";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.wrap-background {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap-background .background__image {
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.wrap-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.wrap-content .content-center {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap-content .content-center__weather {
+  font-size: 32px;
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #7d7d7d;
+  margin-bottom: 30px;
+}
+
+.wrap-content .content-center__time {
+  font-size: 128px;
+  color: #ffffff;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  text-shadow: 5px 5px 0px #3c3c3c;
+}
+
+.wrap-content .content-center__login-form {
+  margin-top: 30px;
+  display: none;
+  width: 500px;
+  height: 60px;
+}
+
+.wrap-content .content-center__login-form--show {
+  display: block;
+}
+
+.wrap-content .content-center__login-input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 2px solid #ffffff;
+}
+
+.wrap-content .content-center__login-input:focus {
+  outline: none;
+  border-bottom: 2px solid #7ccfff;
+}
+
+.wrap-content .content-center__login-input::placeholder {
+  color: #ffffff;
+  transition: color 0.5s;
+}
+
+.wrap-content .content-center__login-input:focus::placeholder {
+  color: #bfe7ff;
+}
+
+.wrap-content .content-center__login-input:focus + .content-center__login-text {
+  opacity: 1;
+}
+
+.wrap-content .content-center__login-text {
+  margin-top: 20px;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.wrap-content .content-center__welcome {
+  display: none;
+  margin-top: 30px;
+  font-size: 64px;
+  color: #ffffff;
+  text-shadow: 3px 3px 0px #7d7d7d;
+}
+
+.wrap-content .content-center__welcome--show {
+  display: flex;
+}
+
+.wrap-content .content-center__welcome-text {
+  font-family: "CBNUJIKJI";
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=style.css.map */
