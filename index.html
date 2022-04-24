@@ -12,9 +12,16 @@
 			<div class="wrap-background"></div>
 			<div class="wrap-content">
 				<div class="content-center">
-					<spa class="content-center__weather"
-						>Clouds / 14.93 Suwon-si</spa
-					>
+					<div class="content-center__weather">
+						<div
+							id="city"
+							class="content-center__weather-city"
+						></div>
+						<div
+							id="weather"
+							class="content-center__weather-weather"
+						></div>
+					</div>
 					<h1 id="clock" class="content-center__time"></h1>
 					<form id="loginForm" class="content-center__login-form">
 						<input
@@ -34,12 +41,38 @@
 				</div>
 				<nav class="menu">
 					<ul class="menu-list">
-						<li class="menu-item"></li>
-						<li class="menu-item"></li>
+						<li class="menu-item">
+							<div id="todoList" class="menu-item__todo-list">
+								<form id="todoAdd" class="todo-list__form">
+									<input type="text" />
+									<button>
+										<i class="fa-solid fa-plus"></i>
+									</button>
+								</form>
+								<ul id="todos" class="todo-list__items"></ul>
+							</div>
+							<div class="menu-item__icon">
+								<i
+									class="menu-item__icon-open menu-item__icon-open--on fa-solid fa-clipboard-list"
+								></i>
+								<i
+									class="menu-item__icon-close fa-solid fa-xmark"
+								></i>
+							</div>
+						</li>
 					</ul>
 				</nav>
 			</div>
 		</main>
+		<script src="js/background.js"></script>
+		<script src="js/clock.js"></script>
+		<script src="js/login.js"></script>
+		<script src="js/weather.js"></script>
 		<script src="js/index.js"></script>
+		<script src="js/todo.js"></script>
+		<script
+			src="https://kit.fontawesome.com/d739cfa832.js"
+			crossorigin="anonymous"
+		></script>
 	</body>
 </html>

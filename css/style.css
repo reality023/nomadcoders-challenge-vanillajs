@@ -140,14 +140,12 @@ table {
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "CBNUJIKJI";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/CBNUJIKJI.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
-
 * {
   font-family: "NEXON Lv1 Gothic OTF";
 }
@@ -167,7 +165,6 @@ body {
   width: 100%;
   height: 100%;
 }
-
 .wrap-background .background__image {
   object-fit: cover;
   position: absolute;
@@ -182,7 +179,6 @@ body {
   width: 100%;
   height: 100%;
 }
-
 .wrap-content .content-center {
   width: 100%;
   height: 100vh;
@@ -191,28 +187,33 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .wrap-content .content-center__weather {
   font-size: 32px;
   color: #ffffff;
-  text-shadow: 2px 2px 0px #7d7d7d;
+  text-shadow: 2px 2px 0px rgb(125, 125, 125);
   margin-bottom: 30px;
 }
-
+.wrap-content .content-center__weather-city {
+  font-size: 24px;
+  text-align: center;
+}
+.wrap-content .content-center__weather-weather {
+  margin-top: 20px;
+  font-size: 36px;
+  text-align: center;
+}
 .wrap-content .content-center__time {
   font-size: 128px;
   color: #ffffff;
   font-family: "M PLUS Rounded 1c", sans-serif;
-  text-shadow: 5px 5px 0px #3c3c3c;
+  text-shadow: 5px 5px 0px rgb(60, 60, 60);
 }
-
 .wrap-content .content-center__login-form {
   margin-top: 30px;
   display: none;
   width: 500px;
   height: 60px;
 }
-
 .wrap-content .content-center__login-form--show {
   display: block;
 }
@@ -228,21 +229,17 @@ body {
   padding: 10px;
   border-bottom: 2px solid #ffffff;
 }
-
 .wrap-content .content-center__login-input:focus {
   outline: none;
   border-bottom: 2px solid #7ccfff;
 }
-
 .wrap-content .content-center__login-input::placeholder {
   color: #ffffff;
   transition: color 0.5s;
 }
-
 .wrap-content .content-center__login-input:focus::placeholder {
   color: #bfe7ff;
 }
-
 .wrap-content .content-center__login-input:focus + .content-center__login-text {
   opacity: 1;
 }
@@ -260,9 +257,8 @@ body {
   margin-top: 30px;
   font-size: 64px;
   color: #ffffff;
-  text-shadow: 3px 3px 0px #7d7d7d;
+  text-shadow: 3px 3px 0px rgb(125, 125, 125);
 }
-
 .wrap-content .content-center__welcome--show {
   display: flex;
 }
@@ -271,4 +267,168 @@ body {
   font-family: "CBNUJIKJI";
   text-transform: uppercase;
 }
+
+.menu {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  display: none;
+}
+.menu.menu--show {
+  display: block;
+}
+.menu-list .menu-item {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.5s ease-out, width 0.5s ease-out, height 0.5s ease-out;
+  overflow: hidden;
+}
+.menu-list .menu-item.menu-item--on {
+  width: 300px;
+  height: 500px;
+}
+.menu-list .menu-item .menu-item__icon {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.menu-list .menu-item .menu-item__icon .menu-item__icon-open,
+.menu-list .menu-item .menu-item__icon .menu-item__icon-close {
+  display: none;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.menu-list .menu-item .menu-item__icon .menu-item__icon-open--on,
+.menu-list .menu-item .menu-item__icon .menu-item__icon-close--on {
+  display: flex;
+}
+.menu-item__todo-list {
+  position: absolute;
+  width: 300px;
+  bottom: 60px;
+  right: 0;
+  height: 440px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  border-bottom: 1px solid #eee;
+}
+.menu-item__todo-list::-webkit-scrollbar {
+  width: 10px;
+}
+.menu-item__todo-list::-webkit-scrollbar-thumb {
+  background-color: #2f3542;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+.menu-item__todo-list::-webkit-scrollbar-track {
+  background-color: grey;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
+}
+.menu-item__todo-list .todo-list__form {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+.menu-item__todo-list .todo-list__form input {
+  flex-shrink: 1;
+  width: 77%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 0 10px;
+}
+.menu-item__todo-list .todo-list__form input:focus {
+  outline: none;
+}
+.menu-item__todo-list .todo-list__form button {
+  width: 20%;
+  flex-shrink: 0;
+  padding: 0 15px;
+  border: none;
+  background-color: #49a9cb;
+  border-radius: 10px;
+  color: #fff;
+}
+.todo-list__items {
+  width: 100%;
+}
+.todo-list__items .todo-list__item {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 0;
+  box-shadow: 0 0 6px 0 #ddd;
+  border-radius: 10px;
+  padding: 10px;
+}
+.todo-list__items .todo-list__item.todo-list__item--checked {
+  background-color: #eeeeee;
+  color: #999;
+}
+.todo-list__items .todo-list__item.todo-list__item--checked .btn-checkbox i {
+  display: block;
+}
+.todo-list__items .todo-list__item.todo-list__item--checked span {
+  text-decoration: line-through;
+}
+.todo-list__items .todo-list__item .btn-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  flex-shrink: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list__items .todo-list__item .btn-checkbox:hover {
+  background-color: #eee;
+}
+.todo-list__items .todo-list__item .btn-checkbox i {
+  display: none;
+  font-size: 12px;
+  color: #a95a5a;
+}
+.todo-list__items .todo-list__item span {
+  font-size: 12px;
+  width: 100%;
+  padding: 1px 10px 0px;
+}
+.todo-list__items .todo-list__item .btn-delete {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.todo-list__items .todo-list__item .btn-delete i {
+  color: #666;
+}
+.todo-list__items .todo-list__item .btn-delete:hover i {
+  color: #a95a5a;
+}
+
 /*# sourceMappingURL=style.css.map */
